@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>タイピングゲーム かんたん</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/typing.css">
+
+  </head>
+  <body id="kantan">
+    <div id="gameAll">
+      <div id="game">
+        <h1 id="mondai">かんたんコース</h1>
+        <form id="inputForm"  method="post" onsubmit="kidou();return false" autocomplete="off">
+          <div id="textFrem"></div>
+          <p id="startButton"><a href="#"><img src="../img/start.png" alt="スタートボタン" id="start" type="button" width = 100 height = 100></a></p>
+        </form>
+      </div>
+      <div id = gameText>
+        <p id="cnt1"></p>
+        <p id="cnt2"></p>
+        <p id="startText">START!をクリックするとゲームが始まるよ</p>
+        <p id="timerFrem"></p>
+        <img id="hantei" src="../img/ahiru.png" width="460" height="304">
+        <p id="homeText"><a href="../typing.html" class="homeButton">ホームへ戻る</a></p>
+      </div>
+    </div>
+    <div id="endText">
+      <div id="resultAll"></div>
+      <div id="syogo"></div>
+      <div id="again"></div>
+    </div>
+
+    <script type="text/javascript" src="../js/typing1.js"></script>
+
+  </body>
+</html>

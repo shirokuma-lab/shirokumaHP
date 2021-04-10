@@ -1,0 +1,365 @@
+/*共通部分*/
+
+/*ゲームスタートの点滅アニメーション*/
+#startText{
+  animation: blinkAnime 1.2s infinite alternate;
+}
+@keyframes blinkAnime{
+   0% { color: #000000 }
+ 100% { color: #ffffff }
+}
+
+
+
+
+#gameAll{
+  text-align: center;
+}
+#mondai{
+  font-size: 500%;
+}
+#timerFrem{
+  font-size: 200%;
+}
+#endText{
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+#kaito{
+  font-size: 150%;
+  text-align: center;
+  width: 400px;
+}
+#endImg{
+  margin-top: 85px;
+}
+img#endImg{
+  width: 50%;
+  height: 50%;
+}
+#kantan{
+  background-image: url(../img/kantan.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+
+}
+#gameText{
+  font-weight: bold;
+}
+.homeButton{
+  background: #fffacd;
+  font-size: 20px;
+  padding: 18px 32px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+
+}
+.homeButton:hover{
+  background: #f5deb3;
+}
+
+#returnGame{
+  background: #fffacd;
+  font-size: 20px;
+  padding: 18px 32px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+#returnGame:hover{
+  background: #f5deb3;
+}
+#again{
+  margin-top: 100px;
+}
+#start:hover{
+  opacity: 0.8;
+}
+
+
+/*ホームのcss*/
+
+li{
+  text-align: center;
+  list-style: none;
+  width: 25%;
+  float: left;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+nav{
+  margin-top: 10px;
+}
+.home{
+  background-image: url(../img/home.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+
+}
+.gameTitle{
+  text-align: center;
+}
+/*タイトルを動かすプログラム*/
+.titleImg{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  animation: titleImg 3s ease infinite;
+}
+@keyframes titleImg {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-15px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-15px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
+
+/*homeのボタンのアニメーションを作成*/
+
+/*ボタン１*/
+.btn1 {
+  display: inline-block;           /* 改行なしのブロック要素 */
+  position: relative;              /* 相対位置指定 */
+  width: 220px;                    /* 横幅 */
+  height: 60px;                    /* 高さ */
+  text-align: center;              /* 水平方向は中央揃え */
+  line-height: 56px;               /* 行の高さ */
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn1 span {
+  display: block;                  /* ブロック要素 */
+  position: absolute;              /* 親要素の左上を基準位置 */
+  width: 100%;                     /* 横幅 */
+  height: 100%;                    /* 高さ */
+  border: 4px solid #333;          /* 罫線 */
+  transform-style: preserve-3d;    /* 重なりを3Dで表示 */
+  transition: 0.5s;   /* 変化時間 */
+}
+.btn1 span:nth-child(1) {
+  background-color: #ffffff;   /* Buttonボタンの色 */
+  color: #000000;          /* Buttonの文字の色 */
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn1 span:nth-child(2) {
+  background-color: #ffff1a;   /* Clickボタンの色 */
+  color: #000000;          /* Clickの文字の色 */
+  transform: rotateX(90deg);       /* 横軸で90度回転 */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn1:hover span:nth-child(1) {
+  transform: rotateX(-90deg);      /* 横軸で前方に90度回転 */
+}
+.btn1:hover span:nth-child(2) {
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+}
+
+/*ボタン２*/
+.btn2 {
+  display: inline-block;           /* 改行なしのブロック要素 */
+  position: relative;              /* 相対位置指定 */
+  width: 220px;                    /* 横幅 */
+  height: 60px;                    /* 高さ */
+  text-align: center;              /* 水平方向は中央揃え */
+  line-height: 56px;               /* 行の高さ */
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn2 span {
+  display: block;                  /* ブロック要素 */
+  position: absolute;              /* 親要素の左上を基準位置 */
+  width: 100%;                     /* 横幅 */
+  height: 100%;                    /* 高さ */
+  border: 4px solid #333;          /* 罫線 */
+  transform-style: preserve-3d;    /* 重なりを3Dで表示 */
+  transition: 0.5s;   /* 変化時間 */
+}
+.btn2 span:nth-child(1) {
+  background-color: #ffffff;   /* Buttonボタンの色 */
+  color: #000000;          /* Buttonの文字の色 */
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn2 span:nth-child(2) {
+  background-color: #66ff66;   /* Clickボタンの色 */
+  color: #000000;          /* Clickの文字の色 */
+  transform: rotateX(90deg);       /* 横軸で90度回転 */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn2:hover span:nth-child(1) {
+  transform: rotateX(-90deg);      /* 横軸で前方に90度回転 */
+}
+.btn2:hover span:nth-child(2) {
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+}
+
+/*ボタン3*/
+.btn3 {
+  display: inline-block;           /* 改行なしのブロック要素 */
+  position: relative;              /* 相対位置指定 */
+  width: 220px;                    /* 横幅 */
+  height: 60px;                    /* 高さ */
+  text-align: center;              /* 水平方向は中央揃え */
+  line-height: 56px;               /* 行の高さ */
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn3 span {
+  display: block;                  /* ブロック要素 */
+  position: absolute;              /* 親要素の左上を基準位置 */
+  width: 100%;                     /* 横幅 */
+  height: 100%;                    /* 高さ */
+  border: 4px solid #333;          /* 罫線 */
+  transform-style: preserve-3d;    /* 重なりを3Dで表示 */
+  transition: 0.5s;   /* 変化時間 */
+}
+.btn3 span:nth-child(1) {
+  background-color: #ffffff;   /* Buttonボタンの色 */
+  color: #000000;          /* Buttonの文字の色 */
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn3 span:nth-child(2) {
+  background-color: #1a1aff;   /* Clickボタンの色 */
+  color: #000000;          /* Clickの文字の色 */
+  transform: rotateX(90deg);       /* 横軸で90度回転 */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn3:hover span:nth-child(1) {
+  transform: rotateX(-90deg);      /* 横軸で前方に90度回転 */
+}
+.btn3:hover span:nth-child(2) {
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+}
+
+/*ボタン４*/
+.btn4 {
+  display: inline-block;           /* 改行なしのブロック要素 */
+  position: relative;              /* 相対位置指定 */
+  width: 220px;                    /* 横幅 */
+  height: 60px;                    /* 高さ */
+  text-align: center;              /* 水平方向は中央揃え */
+  line-height: 56px;               /* 行の高さ */
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn4 span {
+  display: block;                  /* ブロック要素 */
+  position: absolute;              /* 親要素の左上を基準位置 */
+  width: 100%;                     /* 横幅 */
+  height: 100%;                    /* 高さ */
+  border: 4px solid #333;          /* 罫線 */
+  transform-style: preserve-3d;    /* 重なりを3Dで表示 */
+  transition: 0.5s;   /* 変化時間 */
+}
+.btn4 span:nth-child(1) {
+  background-color: #ffffff;   /* Buttonボタンの色 */
+  color: #000000;          /* Buttonの文字の色 */
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn4 span:nth-child(2) {
+  background-color: #ff0000;   /* Clickボタンの色 */
+  color: #000000;          /* Clickの文字の色 */
+  transform: rotateX(90deg);       /* 横軸で90度回転 */
+  transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+.btn4:hover span:nth-child(1) {
+  transform: rotateX(-90deg);      /* 横軸で前方に90度回転 */
+}
+.btn4:hover span:nth-child(2) {
+  transform: rotateX(0deg);        /* 横軸の回転なし */
+}
+
+/*ふつうのcss*/
+#hutu{
+  background-image: url(../img/doukutu.png);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#mondai2{
+  color: white;
+  font-size: 500%;
+}
+
+/*むずいのcss*/
+#muzui{
+  background-image: url(../img/kazan.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*チュートリアルのcss*/
+.tutoBox{
+  background-image: url(../img/flem3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  margin-top: 20px;
+
+}
+
+#tutoimg{
+  margin-top: 90px;
+  width: 850px;
+  height: 520px;
+
+
+}
+
+.tutoPage{
+  background-image: url(../img/tutoBack.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  
+}
+#gameTextTuto{
+  font-weight: bold;
+  text-align: center;
+}
+
+#hidari{
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+#hidari:hover{
+  opacity: 0.8;
+}
+#migi{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+#migi:hover{
+  opacity: 0.8;
+}
+.toorBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#pages{
+  color: white;
+  font-size: 20pt;
+  font-weight: bold;
+}
