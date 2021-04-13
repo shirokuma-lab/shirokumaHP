@@ -72,6 +72,7 @@ body{
   background-image: url(../img/sirokuma.jpg);
   background-size: contain;
   background-repeat: repeat;
+  background-attachment: fixed;
 }
 #mainContent{
   background: rgba(255, 255, 255, .2);
@@ -197,8 +198,8 @@ button.startBtn:hover{
 #otoiawase{
   text-align: center;
 }
-#fujii-ir{
-  width: 330px;
+#shiroMini{
+  width: 350px;
   height: 490px;
 }
 
@@ -736,7 +737,7 @@ button.startBtn:hover{
 
 
   /*--------おといあわせ---------*/
-  #fujii-ir{
+  #shiroMini{
     width: 165px;
     height: 245px;
   }
