@@ -73,6 +73,7 @@ body{
   background-size: contain;
   background-repeat: repeat;
   background-attachment: fixed;
+  font-family: 'M PLUS 1p', sans-serif;
 }
 #mainContent{
   background: rgba(255, 255, 255, .2);
@@ -217,7 +218,7 @@ button.startBtn:hover{
   color:white;
   text-align:center;
   text-decoration:none;
-  padding:10px 15px;
+  padding:6px 15px;
   font-size: 20pt;  
   font-weight: bold;
 }
