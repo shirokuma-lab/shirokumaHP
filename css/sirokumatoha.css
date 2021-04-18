@@ -412,7 +412,8 @@ button.startBtn:hover{
   header{
     display: flex;
     padding-bottom: 5px;
-    background-color: black;
+    /* background-color: black; */
+    background-color: white;
     height: 70px;
   }
   .title-logo{
@@ -422,7 +423,7 @@ button.startBtn:hover{
   .title-logo h1{
     font-family: "Nico Moji";
     font-size: 24pt;
-    color: white;
+    color: #3CB5E0;
     margin-top: 10px;
   }
   .logo{
@@ -444,7 +445,9 @@ button.startBtn:hover{
     display: inline;
     justify-content: space-between;
     clip-path: none;
-    background-color: black;
+    background-color: transparent;
+    
+    
   }
   .header-menu{
     display: inline;
@@ -560,7 +563,7 @@ button.startBtn:hover{
     left: 0;
     width: 30px;
     height: 2px;
-    background-color: white;
+    background-color: #3CB5E0;
     border-radius: 4px;
     transition: all .5s;
   }
@@ -574,7 +577,7 @@ button.startBtn:hover{
     bottom: 4px;
   }
   .open .toggle_btn span {
-    background-color: white;
+    background-color: #3CB5E0;
   }
   .open .toggle_btn span:nth-child(1) {
     -webkit-transform: translateY(10px) rotate(-315deg);
