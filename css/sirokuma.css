@@ -92,18 +92,17 @@ a:hover{
   }
   
   .container {
-    margin-left: 35px;
-    width:300px;
+    margin-left: 40px;
+    width:250px;
     height:100px;
     color: #333;
   }
   .menu {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 60px;
   }
 
   .slide {
-    width:300px;
+    width:250px;
     height:100px;
   }
 }
