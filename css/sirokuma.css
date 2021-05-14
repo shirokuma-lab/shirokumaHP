@@ -63,14 +63,14 @@ a:hover{
   }
 }
 
-/*----------Slickの設定----------*/
+/*----------Slickの設�?----------*/
 .slick-slide {
   text-align: center;
   color: #419be0;
   background: white;
 }
 
-/*----------スマホ対応----------*/
+/*----------スマ�?�対�?----------*/
 @media(max-width:700px){
   h1{
     font-size: 60pt;
@@ -92,7 +92,7 @@ a:hover{
   }
   
   .container {
-    margin-left: 40px;
+    margin-left: 60px;
     width:250px;
     height:100px;
     color: #333;
