@@ -1,28 +1,27 @@
+*{
+  min-width: 0;
+  min-height: 0;
+}
 header{
   display: flex;
   justify-content: space-around;
 }
 h1{
-  font-size: 110pt;
+  font-size: 60pt;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 30px;
   color: white;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
   margin-left: 30px;
-}
-.main-char{
-  width: 40%;
-  height: 40%;
 }
 li{
   list-style: none;
   color: white;
   font-size: 28pt;
   margin: 20px 0;
-  margin-left: 30px;
-  
+  margin-left: 30px; 
+  margin-bottom: 0px;
 }
-
 body{
   background-image: url(../img/sirokuma.jpg);
   font-family: "Nico Moji";
@@ -32,12 +31,46 @@ body{
 a{
   color: white;
   text-decoration: none;
-
 }
 a:hover{
   color: #FFC20E;
 }
-/*-----------------スマホ対応-------------------------*/
+.menu {
+  margin-top:140px;
+}
+.container {
+  margin-left: 45px;
+  width:500px;
+  height:100px;
+  color: #333;
+}
+.main-char{
+  margin: auto 0;
+  width: 32%;
+  height: 32%;
+  animation: popup 2.0s cubic-bezier(0.22, 1, 0.36, 1) 1 forwards;
+}
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+
+/*----------Slickの設定----------*/
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}
+
+/*----------スマホ対応----------*/
 @media(max-width:700px){
   h1{
     font-size: 60pt;
