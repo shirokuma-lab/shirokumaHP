@@ -1,0 +1,77 @@
+section.tool{
+  display: flex;
+  background: rgba(255, 255, 255, .2);
+  max-width: 1300px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+#mainContent1{
+  color: white;
+  border-radius: 12px;
+  padding: 20px 0px;
+  width: 95vw;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-left: 10px;
+}
+#mainContent2{
+  color: white;
+  border-radius: 12px;
+  padding: 20px 0px;
+  width: 95vw;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-right: 10px;
+}
+
+  .tool-imgList{
+    text-align: center;
+    display: inline;
+    margin-top: 30px;
+  }
+  .toolImg-blur{
+    width: 600px;
+    filter: blur(0.6px);
+  }
+  .tool-Img{
+    width: 600px;
+  }
+  .tool-img-pos{
+    padding: 20px;
+  }
+  .tool-syoukai{
+    font-size: 15pt;
+    background-color: rgba(0, 0, 128, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 20px;
+    max-width:600px;
+    text-align: left;
+    margin-bottom:100px;
+  }
+  .slide-show {
+    width: 600px; /* スライドショーの幅 */
+    max-width: 100%; /* スマホで表示が欠けないように */
+    margin: 10px auto; /* 中央揃え */
+    position: relative;
+  }
+  .slide-show img {
+    animation: show 10s infinite; /* 12秒のスライドショーを繰り返し */
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute; /* 画像を重ねて表示 */
+    left: 0;
+    top: 0;
+    }
+  @keyframes show {
+    0% {opacity: 0}
+    17% {opacity: 1}
+    33% {opacity: 1}
+  }
+  .slide-show img:nth-of-type(1) {
+    position: relative;
+  }
+  .slide-show img:nth-of-type(2) {
+    animation-delay: 5s;
+  }
