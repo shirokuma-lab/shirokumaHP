@@ -1,27 +1,17 @@
 section.tool{
-  display: flex;
+  display: inline;
   background: rgba(255, 255, 255, .2);
   max-width: 1300px;
   border-radius: 12px;
   margin: 0 auto;
 }
-#mainContent1{
+#mainContent{
   color: white;
   border-radius: 12px;
-  padding: 20px 0px;
+  padding: 20px 20px;
   width: 95vw;
-  max-width: 650px;
+  max-width: 1300px;
   margin: 0 auto;
-  margin-left: 10px;
-}
-#mainContent2{
-  color: white;
-  border-radius: 12px;
-  padding: 20px 0px;
-  width: 95vw;
-  max-width: 650px;
-  margin: 0 auto;
-  margin-right: 10px;
 }
 
   .tool-imgList{
@@ -30,27 +20,27 @@ section.tool{
     margin-top: 30px;
   }
   .toolImg-blur{
-    width: 600px;
+    width: 1000px;
     filter: blur(0.6px);
   }
   .tool-Img{
-    width: 600px;
+    width: 1000px;
   }
-  .tool-img-pos{
+  /* .tool-img-pos{
     padding: 20px;
-  }
+  } */
   .tool-syoukai{
     font-size: 15pt;
     background-color: rgba(0, 0, 128, 0.2);
     padding: 20px;
     border-radius: 12px;
-    margin-left: 20px;
-    max-width:600px;
+    margin: auto;
+    max-width:1000px;
     text-align: left;
     margin-bottom:100px;
   }
   .slide-show {
-    width: 600px; /* スライドショーの幅 */
+    width: 1000px; /* スライドショーの幅 */
     max-width: 100%; /* スマホで表示が欠けないように */
     margin: 10px auto; /* 中央揃え */
     position: relative;
@@ -75,3 +65,13 @@ section.tool{
   .slide-show img:nth-of-type(2) {
     animation-delay: 5s;
   }
+
+  /*-----------------スマホ対応-------------------------*/
+@media(max-width:700px){
+  section.tool{
+    display:inline;
+  }
+  .tool-syoukai{
+    font-size:10pt;
+  }
+}
