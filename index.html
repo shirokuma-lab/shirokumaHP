@@ -4,65 +4,230 @@
     <meta charset="utf-8">
     <title>しろくまLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="このWebサイトは、専門学校岡山情報ビジネス学院(OIC)のサークルの1つである、しろくまLabのHPです。しろくまLabは、ITやプログラミングに興味がある人の集まりです。日々の活動や、作品などを紹介しています。">
+    <meta name="description" content="専門学校岡山情報ビジネス学院(OIC)のサークルの1つである、しろくまLabのHPです。しろくまLabは、ITやプログラミングに興味がある人の集まりです。日々の活動や、作品などを紹介しています。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shirokuma-lab.github.io/shirokumaHP/">
     <meta property="og:image" content="https://shirokuma-lab.github.io/shirokumaHP/img/shirokuma-fb-img.png">
     <meta property="og:title" content="しろくまLab">
-    <meta property="og:description" content="このWebサイトは、専門学校岡山情報ビジネス学院(OIC)のサークルの1つである、しろくまLabのHPです。しろくまLabは、ITやプログラミングに興味がある人の集まりです。日々の活動や、作品などを紹介しています。">
+    <meta property="og:description" content="専門学校岡山情報ビジネス学院(OIC)のサークルの1つである、しろくまLabのHPです。しろくまLabは、ITやプログラミングに興味がある人の集まりです。日々の活動や、作品などを紹介しています。">
     <meta property="og:locale" content="ja_JP">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
-    <link rel="stylesheet" href="css/sirokuma.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/fabi.ico">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <meta name="google-site-verification" content="NEqkoQIGHh5cuC2Y3jD2havrGyYvcn_xnR8lxOoJMEE" />
   </head>
-  <body>
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-    <header>
-      <div>
-        <h1>しろくまLab</h1>
-
-        <div class='container'>
-          <div class='single-item'>
-            <div>
-              <a href = "https://seeso-oic.web.app/" target="_blank"><img src = "img/slide/snsapp.png" class = "slide" alt ="sns" width = 500px height = 200px></a>
-              <p>SNSアプリを制作しました！</p>
-            </div>
-            <div>
-              <a href = "html/collaboration.html" target="_blank"><img src = "img/slide/collabo.png" class = "slide" alt ="collabo" width = 500px height = 200px></a>
-              <p>ロゴやイメージキャラを作って頂きました！</p>
-            </div>
-            <div>
-              <a href = "https://docs.google.com/forms/d/e/1FAIpQLScssTAP_nIcag2WV9QrURSt2Su2fUbvrNcKCtm9FuFWi-WGZQ/viewform" target="_blank"><img src = "img/slide/recruit.png" class = "slide" alt ="recruit" width = 500px height = 200px></a>
-              <p>サークルメンバー随時募集中！</p>
-            </div>
-          </div>
-        </div>
-
-        <nav>
-          <ul class="menu">
-            <li><a href="html/sirokumatoha.html">しろくまLabとは？</a></li>
-            <li><a href="html/katudounaiyou.html">かつどうないよう</a></li>
-            <li><a href="html/sakuhin.html">さくひんしょうかい</a></li>
-            <li><a href="html/collaboration.html">こらぼ</a></li>
-            <li><a href="html/tool.html">つーる</a></li>
-            <li><a href="html/otoiawase.html">おといあわせ</a></li>
-          </ul>
-        </nav>
+<body>
+  <div id="app">
+  <header>
+    <div class="top-image-area">
+      <div class="logo-area">
+        <img src="./img/logo.png" alt="" class="logo-image">
       </div>
-      <img src="img/shiro_1.png" alt="" class="main-char">
-    </header>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+      <div class="top-comment-area">
+        <h1 class="title-logo">しろくまLab</h1>
+        <p class="top-comment">
+          専門学校岡山情報ビジネス学院(OIC)のサークル。<br>
+          学校の勉強だけでは満足できない。<br>
+          「もっと高度な技術が欲しい」<br>
+          「もっとレベルの高い開発をしたい」<br>
+          そんな学生を絶賛募集中。<br>
+          私たちと一緒に活動しませんか？
+        </p>
+      </div>
+      
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <a href="#" v-scroll-to="'#activities'" class="nav-link" >
+          Activities
+        </a>
+      </li>
+      <li>
+        <a href="#" v-scroll-to="'#technology'" class="nav-link" >
+          Technology
+        </a>
+      </li>
+      <li>
+        <a href="#" v-scroll-to="'#work'" class="nav-link" >
+          Work
+        </a>
+      </li>
+      <li>
+        <a href="#" v-scroll-to="'#contact'" class="nav-link" >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <a href="#" v-scroll-to="'#app'">
+    <button class="return-top-button" v-show="visible">
+      ▲
+    </button>
+  </a>
+  <main>
+    <section>
+      <div class="section-title-area">
+        <h2 class="section-title" id="activities">Activities</h2>
+        <p>-活動-</p>
+      </div>
+      <div class="activities-image-area">
+        <div class="activities-content">
+          <img src="./img/study.svg" alt="" width="300" height="200">
+          <h3>プログラミング練習</h3>
+          <p>
+            Paizaのスキルチェックなどを利用し、プログラミングの技術を磨きます。<br>
+            使用している言語は、Java、C、Pythonなどです。<br>
+            アルゴリズムは人によって考え方が全然違うので、<br>
+            情報を共有し合うことでとても勉強になります。
+          </p>
+        </div>
+        <div class="activities-content">
+          <img src="./img/development.svg" alt="" width="300" height="200">
+          <h3>チーム開発</h3>
+          <p>
+            現在は人数が少なくあまり開発ができていないのですが、
+            もう少しメンバーが増えたら、ペアプログラミングなどから始めようと考えています。<br>
+            最終的には、アプリコンテストでの入賞を目指しています。
+          </p>
+        </div>
+        <div class="activities-content">
+          <img src="./img/fun.svg" alt="" width="300" height="200">
+          <h3>レクリエーション</h3>
+          <p>
+            Zoomを使用して、技術の共有や雑談をしています。<br>
+            また、登校のタイミングではゲームなどをして
+            交流を深めています。<br>
+            コロナが治れば、飲み会やBBQなどを実施しようと考えています。<br>
+            まずは気軽に雑談からの参加もOKです。<br>
+            希望者はご連絡ください!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-title-area">
+        <h2 class="section-title" id="technology">Technology</h2>
+        <p>-技術・ツール-</p>
+      </div>
+      <div class="technology-area">
+        <div class="technology-image-area java-image">
+          <img src="./img/java.png" alt="">
+        </div>
+        <div class="technology-image-area">
+          <img src="./img/python.png" alt="">
+        </div>
+        <div class="technology-image-area">
+          <img src="./img/react.png" alt="">
+        </div>
+        <div class="technology-image-area">
+          <img src="./img/firebase.png" alt="">
+        </div>
+        <div class="technology-image-area">
+          <img src="./img/git.png" alt="">
+        </div>
+        <div class="technology-image-area vscode-image">
+          <img src="./img/vscode.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-title-area">
+        <h2 class="section-title" id="work">Work</h2>
+        <p>-作品-</p>
+      </div>
+      <div class="work-area">
+        <div class="work-content-area">
+          <a href="https://seeso-oic.web.app/" target="_blank" rel="noopener">
+            <div>
+              <img src="./img/seeso.png" alt="">
+              <h3 class="work-content-title">
+                SEESO
+              </h3>
+              <p class="work-content-comment">
+                専門学校岡山情報ビジネス学院(OIC)の学生専用のSNSです。<br>
+                html、css、JavaScript(React)、firebaseを使用しています。<br>
+                自由にイベントを作成したり、参加したりできます。
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="work-content-area">
+          <a href="./html/typingGame/typing.html" target="_blank" rel="noopener">
+            <div>
+              <img src="./img/typing.png" alt="">
+              <h3 class="work-content-title">
+                タイピングゲーム
+              </h3>
+              <p class="work-content-comment">
+                html、css、JavaScriptを使用して、タイピングゲームを作ってみました。<br>
+                問題と入力した文章が同じであれば正解、違えば不正解といった簡単なゲームです。<br>
+                PCで遊んでみてください！
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="work-content-area">
+          <a href="./html/tetris/tetris.html" target="_blank" rel="noopener">
+            <div>
+              <img src="./img/tetris.png" alt="">
+              <h3 class="work-content-title">
+                テトリス
+              </h3>
+              <p class="work-content-comment">
+                こちらはテトリスです。<br>
+                html,css,JavaScriptで作成しています。<br>
+                スペースキーで回転、矢印キーで移動させることができます。<br>
+                後々スコアや音楽を追加していこうと思っています。
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-title-area">
+        <h2 class="section-title" id="contact">Contact</h2>
+        <p>-お問い合わせ-</p>
+      </div>
+      <div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwirYwEjs4eWaeFLeQLxQFTCujs0A0YwS2f7nCFBZh2OgKQQ/viewform?embedded=true" width="90%" height="1182" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      &copy;2020-2021 shirokumalab
+    </p>
+  </footer>
+  </div>
+  <script src="https://unpkg.com/vue@2.2.4"></script>
+  <script src="https://unpkg.com/vue-scrollto"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        visible: false,
+      },
+      created: function() {
+        window.addEventListener("scroll", this.handleScroll);
+      },
+      methods: {
+        handleScroll() {
+          this.scrollY = window.scrollY;
+          if (!this.visible) {
+            this.visible = window.scrollY > 200;
+          } else if (window.scrollY < 190) {
+            this.visible = !this.visible;
+          }
+        }
+      }
+    });
+  </script>
+  
+</body>
 </html>
