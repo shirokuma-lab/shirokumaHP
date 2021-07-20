@@ -148,6 +148,7 @@ section{
   gap: 50px;
   max-width: 1000px;
   margin: auto;
+  padding-bottom: 50px;
 }
 .work-content-area{
   width: 300px;
@@ -185,6 +186,10 @@ footer{
   .top-comment-area{
     margin: 30px auto;
     text-align: center;
+  }
+  section{
+    margin-top: 70px;
+    margin-bottom: 100px;
   }
   
 
