@@ -1,4 +1,4 @@
-![shirokumaHP](https://user-images.githubusercontent.com/72398075/111422837-ae75c380-8732-11eb-9e7b-bae4863050a1.png)
+![スクリーンショット 2021-07-20 18 20 42](https://user-images.githubusercontent.com/81355991/126301226-0027ce1b-cb0e-4834-ad75-019de45010ea.png)
 # しろくまlabのHP
 
 ## 説明
@@ -8,8 +8,7 @@ HTML、CSS、JavaScriptを使用して作成した、自作のゲームなども
 ## 使用言語
 - HTML
 - CSS
-- JavaScript
-- jquery 3.4.1
+- Vue.js
 
 ## 公開ページ
 https://shirokuma-lab.github.io/shirokumaHP/
