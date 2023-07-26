@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name ="robots" content ="noindex" />
+<meta name ="robots" content ="noindex,nofollow">
+<link rel="stylesheet" href="css/style.css">
+<title>ゲームが作りたい!!</title>
+</head>
+<body>
+<header>
+    <h1>RPG</h1>
+</header>
+<main>
+<!-- ゲーム画面(背景の黒) -->
+<div class ="game_screen">
+<!-- 上の白枠 ステータス -->
+<div>    
+<div class ="status_field" id ="status_field">
+</div>
+<!-- ボスと会う確率 -->
+<div class ="probability_field" id ="probability_field">
+    
+</div>
+<!-- モンスターの名前 -->
+<div class ="monsname_field" id ="monsname_field">
+    
+</div>
+<!-- コマンド部分 -->
+<div class ="command_field" id ="command_field">
+</div>
+
+</div>
+
+<!-- 真ん中の空白部分 -->
+<div class ="character_field" id ="character_field">
+    <p class ="title" id ="title">RPG(仮)</p>
+    <div class ="start-menu-flex">
+        <button class ="button_texture" type="button" id ="start">はじめる</button>
+    </div>
+</div>
+
+<!-- テキスト部分 -->
+<div class ="text_field" id ="text_field">
+    
+</div>
+</div>
+
+
+
+</main>
+
+</body>
+<script src ="js/character_status/hero.js"></script>
+<script src ="js/screen_sys.js"></script>
+<script src ="js/text_display.js"></script>
+<script src ="js/config.js"></script>
+<script src ="js/map/town.js"></script>
+<script src ="js/map/forest.js"></script>
+<script src ="js/map_sys.js"></script>
+<script src ="js/Battle_sys.js"></script>
+<script src ="js/character_status/monster_stats.js"></script>
+
+</html>
