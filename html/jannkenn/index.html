@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ジャンケンゲーム</title>
+    <style>
+        /* CSSスタイルを定義 */
+        #choices {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            margin-top: 1%;
+        }
+
+        .choice {
+            padding: 10px;
+            margin: 0 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .result-image {
+            width: 300px;
+            height: 300px;
+        }
+
+        #play-again {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #streak-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        #reset-streak {
+            margin-top: 20px;
+        }
+
+        #all-reset-streak {
+            margin-top: 10px;
+        }
+
+        #win-streak,
+        #best-win-streak {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #reset-button {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        body {
+            background-image: url("images/haikei.jpg"); /* 背景画像のURLを指定 */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            margin-top: 25px;
+            bottom : 20px;
+        }
+        
+        footer {
+            background-color: transparent;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>ジャンケンゲーム</h1>
+
+    <div id="streak-container">
+        <div>
+            <span id="win-streak">連勝記録: 0</span>
+        </div>
+        <div>
+            <span id="best-win-streak">最高連勝記録: 0</span>
+        </div>
+        
+        
+        <div id="reset-streak">
+            <button id="reset-button" onclick="resetStreak()">リセット</button>
+        </div>
+        <br>
+        <div id="all-reset-streak">
+            <button id="reset-button" onclick="allResetStreak()">全リセット</button>
+        </div>
+    </div>
+
+    <div id="choices">
+        <div class="choice" onclick="play('グー')"><img src="images/gu.jpg" alt="グー" class="result-image"></div>
+        <div class="choice" onclick="play('パー')"><img src="images/pa.jpg" alt="パー" class="result-image"></div>
+        <div class="choice" onclick="play('チョキ')"><img src="images/choki.jpg" alt="チョキ" class="result-image"></div>
+    </div>
+
+    <script>
+        // ジャンケンのロジックを記述
+        var winStreak = parseInt(sessionStorage.getItem("winStreak")) || 0;
+        var bestStreak = parseInt(sessionStorage.getItem("bestStreak")) || 0;
+
+        // 連勝記録と最高連勝記録を表示
+        var winStreakElement = document.getElementById("win-streak");
+        winStreakElement.textContent = "連勝記録: " + winStreak;
+
+        var bestStreakElement = document.getElementById("best-win-streak");
+        bestStreakElement.textContent = "最高連勝記録: " + bestStreak;
+
+        function play(playerChoice) {
+            var choices = ['グー', 'パー', 'チョキ'];
+            var computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+            // 勝敗判定と結果の画面に移動
+            if (playerChoice === computerChoice) {
+                location.href = "draw.html";
+                 winStreak = 0;
+            } else if (
+                (playerChoice === "グー" && computerChoice === "チョキ") ||
+                (playerChoice === "パー" && computerChoice === "グー") ||
+                (playerChoice === "チョキ" && computerChoice === "パー")
+            ) {
+                location.href = "win.html";
+                winStreak++; // 勝利の場合は連勝記録をインクリメント
+                if (winStreak > bestStreak) {
+                    bestStreak = winStreak; // 最高連勝記録を更新
+                }
+            } else {
+                location.href = "lose.html";
+                winStreak = 0; // 敗北の場合は連勝記録をリセット
+            }
+
+            // 連勝記録と最高連勝記録を表示
+            winStreakElement.textContent = "連勝記録: " + winStreak;
+            bestStreakElement.textContent = "最高連勝記録: " + bestStreak;
+
+            // セッションストレージに連勝記録を保存
+            sessionStorage.setItem("winStreak", winStreak);
+            sessionStorage.setItem("bestStreak", bestStreak);
+        }
+
+        function resetStreak() {
+            winStreak = 0;
+
+            // 連勝記録と最高連勝記録を表示
+            winStreakElement.textContent = "連勝記録: " + winStreak;
+            bestStreakElement.textContent = "最高連勝記録: " + bestStreak;
+
+            // セッションストレージから連勝記録を削除
+            sessionStorage.removeItem("winStreak");
+        }
+        
+        function allResetStreak() {
+            winStreak = 0;
+            bestStreak = 0;
+
+            // 連勝記録と最高連勝記録を表示
+            winStreakElement.textContent = "連勝記録: " + winStreak;
+            bestStreakElement.textContent = "最高連勝記録: " + bestStreak;
+
+            // セッションストレージから連勝記録を削除
+            sessionStorage.removeItem("winStreak");
+            sessionStorage.removeItem("bestStreak");
+        }
+    </script>
+
+    <footer>
+        <p>© 2023 ジャンケンゲーム. All rights reserved.</p>
+        <p>https://onl.bz/Meu1YZ7</p>
+    </footer>
+</body>
+</html>
